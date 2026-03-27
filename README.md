@@ -1,3 +1,5 @@
+> **📅 Project Period:** May 2025 – Jun 2025 &nbsp;|&nbsp; **Status:** Completed &nbsp;|&nbsp; **Author:** [Bharghava Ram Vemuri](https://github.com/bharghavaram)
+
 # GraphRAG Intelligence
 
 > Microsoft-inspired Knowledge Graph + Vector Hybrid RAG for complex multi-hop reasoning
