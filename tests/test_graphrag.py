@@ -65,7 +65,13 @@ async def test_api_health():
 @pytest.mark.asyncio
 async def test_api_query_invalid_mode():
     from fastapi.testclient import TestClient
+    from unittest.mock import MagicMock
     from main import app
-    client = TestClient(app)
-    resp = client.post("/api/v1/graphrag/query", json={"question": "Test?", "mode": "invalid"})
-    assert resp.status_code == 400
+    from app.api.routes.graph import get_graphrag_service
+    app.dependency_overrides[get_graphrag_service] = lambda: MagicMock()
+    try:
+        client = TestClient(app)
+        resp = client.post("/api/v1/graphrag/query", json={"question": "Test?", "mode": "invalid"})
+        assert resp.status_code == 400
+    finally:
+        app.dependency_overrides.clear()
