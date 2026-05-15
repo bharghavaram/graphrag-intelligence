@@ -16,7 +16,11 @@
 
 ---
 
-## 🎯 Problem Statement
+<div align="center">
+  <img src="https://raw.githubusercontent.com/bharghavaram/graphrag-intelligence/main/docs/images/demo.svg" alt="graphrag-intelligence demo" width="820"/>
+</div>
+
+--- 🎯 Problem Statement
 
 Standard RAG retrieves isolated document chunks but cannot answer questions requiring multi-hop reasoning across entity relationships: "Which researchers who worked at OpenAI later founded companies that raised Series A funding?" Naive vector search finds documents about OpenAI, researchers, and funding separately but cannot traverse the relationships connecting them. GraphRAG combines Neo4j entity relationship graphs with FAISS vector search to enable complex relationship queries at scale.
 
